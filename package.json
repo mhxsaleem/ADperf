@@ -1,0 +1,43 @@
+{
+  "name": "adperf",
+  "version": "1.0.0",
+  "description": "Agent desktop performance",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": "npm-run-all --parallel test:dmaone test:dmatwo test:dmathree test:dmafour test:dmafive test:dmasix test:dmasev",
+    "e2e:dev": "cypress open",
+    "test:dmaone": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestone --browser edge",
+    "test:dmatwo": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftesttwo --browser edge",
+    "test:dmathree": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestthree --browser edge",
+    "test:dmafour": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestfour --browser edge",
+    "test:dmafive": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestfive --browser edge",
+    "test:dmasix": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestsix --browser edge",
+    "test:dmasev": "cypress run --spec cypress/e2e/1-getting-started/sale.cy.ts --env agentUsername=perftestsev --browser edge",
+    "test:paralleldma": "npm-run-all --parallel test:dmaone test:dmatwo test:dmathree test:dmafour test:dmafive",
+    "e2e:todo": "npm-run-all --parallel test:todoone test:todotwo test:todothree test:todofour test:todofive",
+    "test:todoone": "cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestone --browser edge",
+    "test:todotwo": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftesttwo --browser edge",
+    "test:todothree": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestthree --browser edge",
+    "test:todofour": "timeout /t 4 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestfour --browser edge",
+    "test:todofive": "timeout /t 6 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestfive --browser edge",
+    "test:todosix": "timeout /t 8 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestsix --browser edge",
+    "test:todosev": "timeout /t 10 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestsev --browser edge",
+	"test:todoeight": "timeout /t 12 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftesteight --browser edge",
+	"test:todonine": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestnine --browser edge",
+	"test:todoten": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestten --browser edge",
+    "test:paralleltodo": "npm-run-all --parallel test:todoone test:todotwo test:todothree test:todofour test:todofive test:todosix test:todosev test:todoeight test:todonine test:todoten"	
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^14.5.3",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^10.0.3",
+    "cypress-iframe": "^1.0.1",
+    "cypress-parallel": "^0.14.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

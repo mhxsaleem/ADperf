@@ -1,0 +1,36 @@
+{
+  "auth": {
+      "username": "rajsudhirrajsudh_nFHQJ6",
+      "access_key": "qeU3qNS1TM5p8Jmaa8Rd"
+  },
+  "browsers": [
+    {
+      "browser": "edge",
+      "os": "OS X Catalina",
+      "versions": ["latest"]
+    }
+  ],
+  "run_settings": {
+    "cypress_config_file": "./cypress.config.js",
+    "cypress_version": "14.5.3",
+    "npm_dependencies": {
+      "cypress": "14.5.3",
+      "cypress-xpath": "^2.0.1",
+      "ts-node": "^10.9.1",
+      "typescript": "^5.9.2",
+      "@cypress/webpack-preprocessor": "^6.0.0",
+      "@cypress/webpack-batteries-included-preprocessor": "^3.0.0",
+      "cypress-multi-reporters": "^1.6.4",
+      "@testing-library/cypress": "^10.0.3",
+      "cypress-iframe": "^1.0.1"
+    },
+    "project_name": "Agent Desktop perf- Cypress linear test build",
+    "build_name": "Agent Desktop Performance e2e - Build no: ",
+    "parallels": "6",
+    "headless": true,
+    "turboScale": true,
+    "ignore_files": [
+      "**/node_modules/**"
+    ]
+  }
+}

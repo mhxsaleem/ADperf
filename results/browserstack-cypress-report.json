@@ -1,0 +1,222 @@
+{
+  "build_id": "c6bb7b21659d43b08a63320608365ff5",
+  "build_name": "Agent Desktop Performance e2e - Build no: ",
+  "project_name": "Agent Desktop perf- Cypress linear test build",
+  "build_url": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5",
+  "public_build_url": "",
+  "build_duration": {
+    "started_at": "2025-08-18T11:08:41.000Z",
+    "total_duration": 0.23,
+    "setup_time": 0,
+    "test_run_time": 0,
+    "misc_time": 0
+  },
+  "cypress_version": "13.10.0",
+  "cli_version": "BStack-Cypress-CLI/1.32.8 (x64/win32/10.0.22631)",
+  "rows": {
+    "sale-parallel-2.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:09:18.921Z",
+            "duration": 143.509,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/1fd3cea6-95be-4fb2-8957-285010fc3135_2317892",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 104.78
+            }
+          ]
+        }
+      ]
+    },
+    "sale-parallel-3.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:09:20.425Z",
+            "duration": 108.785,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/d8d4a952-0930-488d-83a3-e82ecaa92ec6_2317893",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 108.69
+            }
+          ]
+        }
+      ]
+    },
+    "sale-parallel-4.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:10:34.709Z",
+            "duration": 118.917,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/f6d0e23f-1dfe-4455-8c63-35a7063778c7_2317894",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 118.89
+            }
+          ]
+        }
+      ]
+    },
+    "sale-parallel-5.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:10:34.642Z",
+            "duration": 116.585,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/cbd9037b-1329-42e1-bc4f-eb91d5a72aa7_2317895",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 116.5
+            }
+          ]
+        }
+      ]
+    },
+    "sale-parallel-6.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:10:34.336Z",
+            "duration": 119.269,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/03f883bc-e248-4f4c-abaf-e333299652ad_2317896",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 119.2
+            }
+          ]
+        }
+      ]
+    },
+    "sale.cy.ts": {
+      "path": "cypress/e2e/1-getting-started",
+      "meta": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "passed_with_skipped": 0
+      },
+      "sessions": [
+        {
+          "meta": {
+            "started_at": "2025-08-18T11:09:21.618Z",
+            "duration": 110.728,
+            "total_tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0
+          },
+          "name": "edge 130, linux",
+          "status": "passed",
+          "link": "https://grid.browserstack.com/dashboard/builds/c6bb7b21659d43b08a63320608365ff5/cypress-tests/tests/42480b95-569a-4dd5-abfa-30877e505085_2317897",
+          "public_url": "",
+          "tests": [
+            {
+              "name": "Login User and Verify Elements",
+              "status": "passed",
+              "duration": 110.71
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

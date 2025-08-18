@@ -23,10 +23,10 @@
     "test:todofive": "timeout /t 6 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestfive --browser edge",
     "test:todosix": "timeout /t 8 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestsix --browser edge",
     "test:todosev": "timeout /t 10 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestsev --browser edge",
-	"test:todoeight": "timeout /t 12 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftesteight --browser edge",
-	"test:todonine": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestnine --browser edge",
-	"test:todoten": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestten --browser edge",
-    "test:paralleltodo": "npm-run-all --parallel test:todoone test:todotwo test:todothree test:todofour test:todofive test:todosix test:todosev test:todoeight test:todonine test:todoten"	
+    "test:todoeight": "timeout /t 12 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftesteight --browser edge",
+    "test:todonine": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestnine --browser edge",
+    "test:todoten": "timeout /t 2 && cypress run --spec cypress/e2e/1-getting-started/todo.cy.ts --env agentUsername=perftestten --browser edge",
+    "test:paralleltodo": "npm-run-all --parallel test:todoone test:todotwo test:todothree test:todofour test:todofive test:todosix test:todosev test:todoeight test:todonine test:todoten"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "@testing-library/cypress": "^10.0.3",
     "cypress-iframe": "^1.0.1",
     "cypress-parallel": "^0.14.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2"
   }
 }

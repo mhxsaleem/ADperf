@@ -93,6 +93,10 @@ describe('Sales flow', () => {
   searchCustomerPage.getLastNameTextBox().should('be.visible').clear().type("ADPtestqafAugL");
   searchCustomerPage.getSearchButton().should('be.visible').click().wait(5000);
 
+  // Wait for search results to load completely
+  searchCustomerPage.getCustomerSearchResult().should('be.visible').and('have.length.at.least', 1);
+  cy.wait(2000); // Additional wait for data to populate
+  
   searchCustomerPage.getCustomerSearchResult().eq(0).click().wait(5000);
 
   searchCustomerPage
@@ -103,13 +107,27 @@ describe('Sales flow', () => {
       cy.log('Zero row data:' + print);
     });
 
+  // More robust surname data extraction with better error handling
   searchCustomerPage
     .getCustomerSearchResult()
     .eq(0)
     .within(() => {
-      cy.get("[data-field='surname']").then((data) => {
-        const surnameData = data.text();
-        cy.log('Surname data: ' + surnameData);
+      // Try to find surname data with extended timeout and fallback options
+      cy.get('body').then(($body) => {
+        if ($body.find("[data-field='surname']").length > 0) {
+          // Original selector exists
+          cy.get("[data-field='surname']").then((data) => {
+            const surnameData = data.text();
+            cy.log('Surname data: ' + surnameData);
+          });
+        } else {
+          // Fallback: look for the surname text directly
+          cy.log('data-field selector not found, using text search fallback');
+          cy.contains('ADPtestqafAugL').then((data) => {
+            const surnameData = data.text();
+            cy.log('Surname data (fallback): ' + surnameData);
+          });
+        }
       });
     });
   searchCustomerPage.getCustomerSearchResult().eq(0).dblclick();

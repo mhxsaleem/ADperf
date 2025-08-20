@@ -1,0 +1,17 @@
+userName: rajsudhirrajsudh_nFHQJ6
+accessKey: qeU3qNS1TM5p8Jmaa8Rd
+projectName: Default Project
+testName: First Playwright Load Test
+testType: Playwright
+language: nodejs
+files: 
+  dependencies:
+   - ./package.json                 
+  testConfigs: 
+   - ./playwright.config.ts
+vus: 2
+regions:
+  - loadzone: us-east-1
+    percent: 50
+  - loadzone: us-west-1
+    percent: 50

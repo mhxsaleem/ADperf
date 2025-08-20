@@ -28,3 +28,15 @@ module.exports = defineConfig({
     },
   },
 });
+
+
+
+    let originalFunction = module.exports.e2e.setupNodeEvents;
+    module.exports.e2e.setupNodeEvents = (on, config) => {
+      const bstackOn = require("./cypressPatch.js")(on);
+      if (originalFunction !== null && originalFunction !== undefined) {
+        originalFunction(bstackOn, config);
+      }
+      return config;
+    }
+    

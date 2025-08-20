@@ -6,7 +6,7 @@
   "browsers": [
     {
       "browser": "edge",
-      "os": "OS X Catalina",
+      "os": "Windows 10",
       "versions": ["latest"]
     }
   ],
@@ -27,8 +27,7 @@
     "project_name": "Agent Desktop perf- Cypress linear test build",
     "build_name": "Agent Desktop Performance e2e - Build no: ",
     "parallels": "6",
-    "headless": true,
-    "turboScale": true,
+    "spec_timeout": 120,
     "ignore_files": [
       "**/node_modules/**"
     ]

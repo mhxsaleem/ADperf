@@ -133,17 +133,6 @@ describe('Sales flow', () => {
       expect(text).to.contain('Add Item');
     });
 
-  //   cy.wait(10000);
-  // registerItemPage.mutiStepper(0).should('have.text', 'Verify Account Details');
-  // registerItemPage.mutiStepper(1).should('have.text', 'Add Item');
-  // registerItemPage.mutiStepper(2).should('have.text', 'Review Quotes');
-  // registerItemPage.mutiStepper(3).should('have.text', 'Cross Sale');
-  // registerItemPage.mutiStepper(4).should('have.text', 'Final Quotes');
-  // registerItemPage.mutiStepper(5).should('have.text', 'Offer Breakdown');
-  // registerItemPage.mutiStepper(6).should('have.text', 'Select Billing Account');
-  // registerItemPage.mutiStepper(7).should('have.text', 'Payment Details');
-  // registerItemPage.mutiStepper(8).should('have.text', 'Confirmation & Thank you');
-
   registerItemPage.mutiStepperStageCheck(0).should('be.visible');
   registerItemPage.nextButton().should('be.visible').should('be.enabled').click();
   registerItemPage.registrationCard().should('be.visible');

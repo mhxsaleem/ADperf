@@ -1,0 +1,24 @@
+userName: rajsudhirrajsudh_nFHQJ6
+accessKey: qeU3qNS1TM5p8Jmaa8Rd
+projectName: Default Project
+testName: ADP Playwright Load Test
+testType: Playwright
+language: nodejs
+files: 
+  dependencies:
+   - package.json                 
+  testConfigs: 
+   - playwright.config.ts
+  testFiles:
+   - tests/sale.spec.ts
+vus: 2
+regions:
+  - loadzone: us-east-1
+    percent: 50
+  - loadzone: us-west-1
+    percent: 50
+env:
+  VU1_USERNAME: perftestone
+  VU1_PASSWORD: automation0325
+  VU2_USERNAME: perftesttwo
+  VU2_PASSWORD: automation0325

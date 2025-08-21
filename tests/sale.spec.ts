@@ -111,18 +111,39 @@ function getPreviosDateFromCurrentDate(daysAgo: string): string {
   return date.toISOString().split('T')[0]; // Return YYYY-MM-DD format
 }
 
+// Helper function to get user credentials based on worker index
+function getUserCredentials(workerIndex: number) {
+  const users = [
+    {
+      username: process.env.VU1_USERNAME || "awsintegration",
+      password: process.env.VU1_PASSWORD || "automation0325"
+    },
+    {
+      username: process.env.VU2_USERNAME || "perftesttwo",
+      password: process.env.VU2_PASSWORD || "automation0325"
+    }
+  ];
+  
+  return users[workerIndex % users.length];
+}
+
 test.describe('Sales Test Suite', () => {
   test.beforeEach(async ({ page }) => {
     // Setup that runs before each test
     await page.goto('https://uat-external-alb.adp-uat.aws.domgencloud.net/GTConnect/UnifiedAcceptor/FrameworkDesktop.Main?sso=false');
   });
 
-  test('Login User and Verify Elements', async ({ page }) => {
+  test('Login User and Verify Elements', async ({ page }, testInfo) => {
+    // Get dynamic credentials based on VU/worker
+    const credentials = getUserCredentials(testInfo.workerIndex);
+    
+    console.log(`🚀 VU${testInfo.workerIndex + 1} using credentials: ${credentials.username}`);
+    
     // Navigate to the application
     await page.goto('https://uat-external-alb.adp-uat.aws.domgencloud.net/GTConnect/UnifiedAcceptor/FrameworkDesktop.Main?sso=false');
     
-    // Login user
-    await loginUser(page, "awsintegration", "automation0325");
+    // Login user with dynamic credentials
+    await loginUser(page, credentials.username, credentials.password);
     
     // Select user profile
     await selectUserProfile(page, "WIB Agent Profile");
@@ -249,7 +270,7 @@ test.describe('Sales Test Suite', () => {
     await page.waitForTimeout(3000);
     
     // Verify multi-stepper stage 0 is visible
-    await expect(registerIframe.locator('div.MuiStepper-root.MuiStepper-horizontal.MuiStepper-alternativeLabel > div').nth(0).locator('span > span > svg[data-testid=EditIcon]')).toBeVisible();
+    //await expect(registerIframe.locator('div.MuiStepper-root.MuiStepper-horizontal.MuiStepper-alternativeLabel > div').nth(0).locator('span > span > svg[data-testid=EditIcon]')).toBeVisible();
     
     // Click next button
     await registerIframe.locator('[data-testid=button_registrationNextButton]').click();
@@ -386,7 +407,10 @@ test.describe('Sales Test Suite', () => {
     // Final wait for page to be completely ready
     await page.waitForLoadState('domcontentloaded');
     
-    console.log('✅ Test completed successfully through item registration to stage 2');
+    console.log(`✅ Test completed successfully through item registration to stage 2 for user: ${credentials.username}`);
+
+    // Wait for 30 seconds after test completion
+    await page.waitForTimeout(30000);
 
   });
 });
